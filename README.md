@@ -3,5 +3,5 @@ Repository for my Advent of code solutions. I'm going to try a different program
 
 <h2>Day 1: Calorie Counting</h2>
 <b>Language used:</b> GoLang <br/>
-<b>Language efficiency:</b> Beginner <br/>
+<b>New to this language?</b> Yes <br/>
 <b>Correct Answer found:</b> Yes <br/>
