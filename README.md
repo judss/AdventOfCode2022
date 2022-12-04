@@ -4,7 +4,7 @@ Repository for my Advent of code solutions. I'm going to try a different program
 The main aim for me here is to try and get more familiar with programing languages that I have either not used before or have very little experience with. However, I will also be using languages that I am proficient in too.
 
 Proficiency Level explained: </br>
-0-5 where 0 = brand new to language and 5 = Comfortable / use day to day
+A scale from 0 to 5; where 0 = brand new to language and 5 = Use the language often
 
 <h2>Day 1: Calorie Counting</h2>
 <b>Language used:</b> GoLang <br/>
