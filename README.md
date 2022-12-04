@@ -1,6 +1,7 @@
 # AdventOfCode
 https://adventofcode.com/ <br/>
-Repository for my Advent of code solutions. I'm going to try a different programming language for each day.
+Repository for my Advent of code solutions. I'm going to try a different programming language for each day.<br/>
+The main aim for me here is to try and get more familiar with programing languages that I have either not used before or have very little experience with. I will also be using languages that I am proficient in too.
 
 Proficiency Level explained: </br>
 0-5 where 0 = brand new to language and 5 = Comfortable / use day to day
