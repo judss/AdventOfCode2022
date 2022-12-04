@@ -11,3 +11,8 @@ Repository for my Advent of code solutions. I'm going to try a different program
 <b>New to this language:</b> No <br/>
 <b>Correct Answer found (Part 1):</b> Yes <br/>
 <b>Correct Answer found (Part 2):</b> Yes <br/>
+
+<h2>Day 3: Rucksack Reorganization</h2>
+<b>Language used:</b> TBC <br/>
+<b>New to this language:</b> TBC <br/>
+<b>Correct Answer found:</b> TBC <br/>
