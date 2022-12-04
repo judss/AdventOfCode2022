@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { YouPlays, OpponentPlays } from './constants';
+import { YouPlays } from './constants';
 
 // opponent
 // a = rock
@@ -31,6 +31,20 @@ import { YouPlays, OpponentPlays } from './constants';
 // c x = 6
 // c y = 0
 
+var outcomes: {[key: string]: number} = {
+    "A X": 3,
+    "A Y": 6,
+    "A Z": 0,
+
+    "B Y": 3,
+    "B Z": 6,
+    "B X": 0,
+
+    "C Z": 3,
+    "C X": 6,
+    "C Y": 0,
+}
+
 const puzzleInput = fs.readFileSync('puzzle-input.txt', 'utf8');
 const games = puzzleInput.split("\r\n");
 
@@ -39,14 +53,13 @@ var scores:number[] = [];
 games.forEach(game => {
     
     const players = game.split(" ");
-    var opponent = players[0];
     var you = players[1];
 
     // get the initial score based on what you played
-    var score = getInitialScore(you);
+    var score = getPayScore(you);
 
     // get the score for the outcome of the match
-    score += getOutcomeScore(opponent, you);
+    score += outcomes[game];
 
     // push the score to the totals
     scores.push(score);
@@ -58,7 +71,7 @@ const result = scores.reduce((accumulator, current) => {
 
 console.log(result);
 
-function getInitialScore(play:string):number{
+function getPayScore(play:string):number{
     switch(play){
         case YouPlays.rock:
             return 1;
@@ -69,51 +82,4 @@ function getInitialScore(play:string):number{
         default:
             throw new Error(`Incorrect You Play: ${play}`);
     }
-}
-
-function getOutcomeScore(opponent:string, you:string):number{
-    var score = 0;
-
-    switch(opponent){
-        case OpponentPlays.rock:
-            if(you == YouPlays.rock)
-            {
-                score = 3;
-            }
-            else if(you == YouPlays.paper)
-            {
-                score = 6;
-            } 
-            else if(you == YouPlays.sissors){
-                score = 0;
-            }                
-        case OpponentPlays.paper:
-            if(you == YouPlays.rock)
-            {
-                score = 0;
-            }
-            else if(you == YouPlays.paper)
-            {
-                score = 3;
-            } 
-            else if(you == YouPlays.sissors){
-                score = 6;
-            }  
-        case OpponentPlays.sissors:
-            if(you == YouPlays.rock)
-            {
-                score = 6;
-            }
-            else if(you == YouPlays.paper)
-            {
-                score = 0;
-            } 
-            else if(you == YouPlays.sissors){
-                score = 3;
-            }  
-        default:
-            throw new Error(`Incorrect Opponent Play: ${opponent}`);
-    }
-
-    return score;
 }
