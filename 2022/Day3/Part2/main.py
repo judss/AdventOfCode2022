@@ -3,7 +3,7 @@ import os
 ROOT_DIR = os.path.abspath(os.curdir)
 
 def readFile():
-  with open('./2022/Day3/part1/puzzle-input.txt') as f:
+  with open('./2022/Day3/part2/puzzle-input.txt') as f:
     contents = f.read()
     return contents
 
@@ -16,23 +16,28 @@ def getPriority(char):
     asci_number = ord((char))
     return asci_number - correction_number
 
+def bundleTheRucksacksIntoGroups(rucksacks):
+    for i in range(0, len(rucksacks), 3):
+        yield rucksacks[i:i + 3]
+
 # read the file
 fileContents = readFile()
 
 # split the rucksacks
 rucksacks = splitTheRucksacks(fileContents)
 
-#split the compartments and work out the total priotiries
+# bundle the rucksack into groups of 3
+bundles = bundleTheRucksacksIntoGroups(rucksacks)
+
+#find the common letter in each bundle and total the prorities together
 total = 0
 
-for x in rucksacks:
-    first_compartment  = x[:len(x)//2]
-    second_compartment = x[len(x)//2:]
+# go into each bundle and find the common character
+for bundle in bundles:
+    result = set.intersection(*map(set,bundle))
+    common_character = ''.join(sorted(list(result)))
 
-#find the letter that is in both compartments
-    common_character = ''.join(set(first_compartment).intersection(second_compartment))
-
-#calculate the priority of that letter
+#calculate the priority of that character
     priority = getPriority(common_character)
 
 #total all of the priorities
