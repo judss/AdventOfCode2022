@@ -20,4 +20,4 @@ Proficiency Level explained: </br>
 <b>Language used:</b> Python <br/>
 <b>Proficiency Level:</b> 1 <br/>
 <b>Correct Answer found (Part 1):</b> Yes <br/>
-<b>Correct Answer found (Part 2):</b> TBC <br/>
+<b>Correct Answer found (Part 2):</b> Yes <br/>
