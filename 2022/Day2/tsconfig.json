@@ -1,15 +1,14 @@
 {
     "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
-        "sourceMap": true,
-        "types": [
+      "outDir": "bin",
+      "target": "es5",
+      "module": "commonjs",
+      "sourceMap": true,
+      "types": [
             "node"
-          ]
+        ],
     },
     "exclude": [
-        "typings/browser.d.ts",
-        "typings/browser",
         "node_modules"
       ]
 }

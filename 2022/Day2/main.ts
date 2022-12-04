@@ -1,36 +1,6 @@
 import * as fs from 'fs';
 import { YouPlays } from './constants';
 
-// opponent
-// a = rock
-// b = paper
-// c = sissors
-
-// you
-// x = rock
-// y = paper
-// z = sissors
-
-// paper > rock
-// rock > sissors
-// sissors > paper
-
-// a & x = rock
-// b & y = paper
-// c & z = sissors
-
-// a x = 3
-// a y = 6
-// a z = 0
-
-// b y = 3
-// b z = 6
-// b x = 0
-
-// c z = 3
-// c x = 6
-// c y = 0
-
 var outcomes: {[key: string]: number} = {
     "A X": 3,
     "A Y": 6,
