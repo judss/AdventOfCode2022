@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "outDir": "bin",
+      "target": "es5",
+      "module": "commonjs",
+      "sourceMap": true,
+      "types": [
+            "node"
+        ],
+    },
+    "exclude": [
+        "node_modules"
+      ]
+}
