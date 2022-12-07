@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"sort"
 	"strconv"
 	"strings"
 )
@@ -41,15 +42,17 @@ func main() {
 		totals = append(totals, total)
 	}
 
-	mostCalories := totals[0]
+	sort.Slice(totals, func(i, j int) bool {
+		return totals[i] > totals[j]
+	})
 
-	for i := 1; i < len(totals); i++ {
+	top3 := totals[:3]
+	var totalOfTop3 int
 
-		if mostCalories < totals[i] {
-
-			mostCalories = totals[i]
-		}
+	for i := 0; i < len(top3); i++ {
+		totalOfTop3 = totalOfTop3 + top3[i]
 	}
 
-	fmt.Println("Total Calories of the elf carrying the most:", mostCalories)
+	fmt.Println("The top three calories totals are:", top3)
+	fmt.Println("The top three total calories is:", totalOfTop3)
 }
