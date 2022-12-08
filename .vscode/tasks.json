@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}\\Day8\\Part1\\part1.csproj",
+                "${workspaceFolder}\\Day8\\Part2\\part2.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],

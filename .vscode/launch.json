@@ -5,14 +5,14 @@
             // Use IntelliSense to find out which attributes exist for C# debugging
             // Use hover for the description of the existing attributes
             // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
-            "name": ".NET Core Launch (Day 8: Part 1)",
+            "name": ".NET Core Launch (Day 8: Part 2)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "buildDay8",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}\\Day8\\Part1\\bin\\Debug\\net7.0\\part1.dll",
+            "program": "${workspaceFolder}\\Day8\\Part2\\bin\\Debug\\net7.0\\part2.dll",
             "args": [],
-            "cwd": "${workspaceFolder}\\Day8\\Part1",
+            "cwd": "${workspaceFolder}\\Day8\\Part2",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
