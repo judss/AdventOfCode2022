@@ -29,7 +29,6 @@
             var highestScore = trees.Aggregate((agg, next) => 
                 next.ScenicScore > agg.ScenicScore ? next : agg);
 
-            Console.WriteLine(JsonConvert.SerializeObject(highestScore));
             Console.WriteLine($"Answer: {JsonConvert.SerializeObject(highestScore.ScenicScore)}");
         }
 
@@ -37,22 +36,10 @@
         {
             foreach(var tree in trees)
             {
-                var treeIWant = tree.Height == 8 && tree.Row == 7 && tree.Column == 48;
-
-                if(treeIWant)
-                {
-                   Console.WriteLine(JsonConvert.SerializeObject(tree)); 
-                }
-
                 tree.Top = CheckIsVisibleFromTop(tree, trees);
                 tree.Bottom = CheckIsVisibleFromBottom(tree, trees);
                 tree.Left = CheckIsVisibleFromLeft(tree, trees);
                 tree.Right = CheckIsVisibleFromRight(tree, trees);
-
-                if(treeIWant)
-                {
-                   Console.WriteLine(JsonConvert.SerializeObject(tree)); 
-                }
             }
         }
 
