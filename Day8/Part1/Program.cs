@@ -5,8 +5,6 @@
 
     public class Program
     {
-        private static int minHeight = 0;
-        private static int maxHeight = 9;
         private static int maxRow = 0;
         private static int maxColumn = 0;
 
