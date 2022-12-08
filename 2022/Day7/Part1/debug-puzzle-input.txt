@@ -1,32 +1,23 @@
 $ cd /
 $ ls
-dir dcvzbqf
-23804 gsdpmrq.bsz
-24936 nfngbl.mcn
-178747 plw.frm
-dir qdtw
-dir qmfvph
-$ cd dcvzbqf
+dir a
+14848514 b.txt
+8504156 c.dat
+dir d
+$ cd a
 $ ls
-dir gfvl
-$ cd gfvl
+dir e
+29116 f
+2557 g
+62596 h.lst
+$ cd e
 $ ls
-104564 dnbmm.bgc
+584 i
 $ cd ..
 $ cd ..
-$ cd qdtw
+$ cd d
 $ ls
-dir fsj
-dir jwfbvmds
-216592 pcg.wnr
-dir pwnhpm
-dir qbrpq
-dir wdc
-dir wpw
-dir zbfgmw
-$ cd fsj
-$ ls
-118575 ltbr.mdf
-$ cd ..
-$ cd jwfbvmds
-$ ls
+4060174 j
+8033020 d.log
+5626152 d.ext
+7214296 k

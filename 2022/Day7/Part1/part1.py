@@ -105,10 +105,10 @@ def printAll(directories):
     printAll(dir.subDirectories)
 
 # read the file
-fileContents = readFile()
-rows = fileContents.splitlines()
+with open("./2022/Day7/part1/puzzle-input.txt", "r", encoding="utf-8") as puzzle_input:
+        commands = [line.strip() for line in puzzle_input.readlines()]
 
-for x in rows:
+for x in commands:
   if x.startswith("$"):
     # is command
     DoCommand(x)
