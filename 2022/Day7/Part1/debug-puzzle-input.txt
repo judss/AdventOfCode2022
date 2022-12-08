@@ -1,0 +1,32 @@
+$ cd /
+$ ls
+dir dcvzbqf
+23804 gsdpmrq.bsz
+24936 nfngbl.mcn
+178747 plw.frm
+dir qdtw
+dir qmfvph
+$ cd dcvzbqf
+$ ls
+dir gfvl
+$ cd gfvl
+$ ls
+104564 dnbmm.bgc
+$ cd ..
+$ cd ..
+$ cd qdtw
+$ ls
+dir fsj
+dir jwfbvmds
+216592 pcg.wnr
+dir pwnhpm
+dir qbrpq
+dir wdc
+dir wpw
+dir zbfgmw
+$ cd fsj
+$ ls
+118575 ltbr.mdf
+$ cd ..
+$ cd jwfbvmds
+$ ls
