@@ -3,6 +3,7 @@
 #include "string"
 #include <list>
 #include <algorithm>
+#include <regex>
 using namespace std;
 
 class Position {  
@@ -34,13 +35,6 @@ bool checkIfLeftOrRight(Position newHeadPosition, Position currentTailPosition){
 
 int main() 
 {
-    // position constants
-    const string overLapping = "OL";
-    const string left = "L";
-    const string right = "R";
-    const string above = "A";
-    const string underneath = "U";
-
     list<Position> visitedTailPositions;
     Position currentHeadPosition;
     currentHeadPosition.x = 0;
@@ -53,13 +47,19 @@ int main()
 
     ifstream PuzzleInput("puzzle-input.txt");
 
-    for (string line; std::getline(PuzzleInput, line); )
+    for (string line; std::getline(PuzzleInput, line);)
     {
         // get direction to go in
         char directionOfMove = line[0];
 
         // convert char to int using ascii code
-        int numberOfMoves = line[2] - '0';
+        string output = regex_replace(
+        line,
+        regex("[^0-9]*([0-9]+).*"),
+        string("$1")
+        );
+        
+        int numberOfMoves = stoi(output);
 
         for(int i = 0; i < numberOfMoves; i++)
         {
