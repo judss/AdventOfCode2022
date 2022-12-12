@@ -12,6 +12,11 @@ class Position {
         int y;
 };
 
+class Rope{
+    public:
+        list<Position> positions;
+};
+
 bool checkIfHeadIsOverLappingTail(Position newHeadPosition, Position currentTailPosition){
     return currentTailPosition.x == newHeadPosition.x && currentTailPosition.y == newHeadPosition.y;
 }
